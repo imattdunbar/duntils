@@ -16,7 +16,7 @@ class DTRealm {
     static func setup() {
         
         let databaseURL = FileManager.documentsURL.appendingPathComponent("duntils.realm")
-        print("Database URL: \(databaseURL.path)")
+        log.debug("Database URL: \(databaseURL.path)")
         
         let config = Realm.Configuration(fileURL: databaseURL)
         instance.realm = try! Realm(configuration: config)

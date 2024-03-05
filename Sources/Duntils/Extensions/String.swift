@@ -10,3 +10,8 @@ import Foundation
 extension String: LocalizedError {
     public var errorDescription: String? { return self }
 }
+
+extension String {
+    static var loggerSubsystem = Bundle.main.bundleIdentifier ?? "DuntilsLibrary"
+    static var loggerCategory = "Duntils"
+}
